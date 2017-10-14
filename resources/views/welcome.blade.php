@@ -114,7 +114,7 @@
                                 </p>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="btn btn-success btn-lg wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.2s"><i class="fa fa-android fa-2x"></i> Descargar<br /> <small>Android</small></a>
+                                <a href="https://play.google.com/store/apps/details?id=xyz.altoke" class="btn btn-success btn-lg wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.2s" target="_blank"><i class="fa fa-android fa-2x"></i> Descargar<br /> <small>Android</small></a>
                             </div>
                             
                         </div>                  
