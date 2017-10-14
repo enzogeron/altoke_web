@@ -96,15 +96,15 @@
                             <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
                                 <h2>Altoke App</h2>
                                 <p>
-                                    Deja de perder tiempo, con Altoke todo es mas rápido y fácil.<br>
+                                    Deja de perder tiempo, con Altoke todo es más rápido y fácil.<br>
                                     Con esta aplicación vas a poder:
                                     <ul>
                                     	<li>Enterarte de los llamados a inscripción que se realizan en la facu</li>
-                                    	<li>Conocer cuales son las becas de formación disponibles para todas las carreras</li>
+                                    	<li>Conocer cuáles son las becas de formación disponibles para todas las carreras</li>
                                     	<li>Consultar información sobre tu departamento al instante</li>
                                     	<li>Enterarte de todos los eventos que se realizan en la facu</li>
                                     	<li>Participar activamente en actividades relacionadas al deporte universitario</li>
-                                    	<li>Desacargar los modelos de notas que necesites para hacer tus tramites</li>
+                                    	<li>Descargar los modelos de notas que necesites para hacer tus tramites</li>
                                     	<li>Ver vídeos creados por tus compañeros y profes para que refuerces aquellos temas que no entendiste</li>
                                     </ul>
                                 </p>
