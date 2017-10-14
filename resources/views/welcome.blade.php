@@ -5,8 +5,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ url('favicon.ico') }}" type="image/x-icon" />
-    <link rel="shortcut icon" href="{{ url('favicon.ico') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ url('favicon.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ url('favicon.png') }}" type="image/x-icon" />
 
     <title>Altoke App - Grupo de Desarrollo Universitario</title>
 
