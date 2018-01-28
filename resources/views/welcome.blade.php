@@ -43,8 +43,8 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="#" alt="Altoke App" width="150" height="40" />
+                    <a class="navbar-brand" href="{{ route('home') }}">
+                        <img src="{{ url('img/logo_altoke.png') }}" alt="Altoke App" width="30" height="30" />
                     </a>
                 </div>
 
@@ -265,7 +265,7 @@
 
                             <div class="wow fadeInLeft" data-wow-delay="0.1s">
                                 <div class="text-left">
-                                    <p>&copy; Copyright 2017 - Altoke App. All rights reserved.</p>
+                                    <p>&copy; Copyright 2018 - Altoke App. All rights reserved.</p>
                                 </div>
                             </div>
 
