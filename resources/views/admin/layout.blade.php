@@ -125,6 +125,25 @@
                             </li>
                         </ul>
                     </li>
+
+                    <li class="treeview {{ request()->is('admin/notificaciones*') ? 'active' : '' }}">
+                        <a href="#">
+                            <i class="fa fa-bell"></i>
+                            <span>Notificaciones</span>
+                            <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li {{ request()->is('admin/notificaciones') ? 'class=active' : '' }}>
+                                <a href="{{ route('admin.notificaciones.index') }}">Listado de notificaciones</a>
+                            </li>
+                            <li {{ request()->is('admin/notificaciones/create') ? 'class=active' : '' }}>
+                                <a href="{{ route('admin.notificaciones.create') }}">Crear nueva notificación</a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li class="treeview {{ request()->is('admin/concursos*') ? 'active' : '' }}">
                         <a href="#">
                             <i class="fa fa-sticky-note"></i>

@@ -34,5 +34,6 @@ Route::group(['middleware'=> ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], f
 	Route::resource('roles', 'Admin\RolesController', ['middleware' => ['acl:administrador']]);
 	Route::resource('permisos', 'Admin\PermissionsController', ['middleware' => ['acl:administrador']]);
 	Route::resource('concursos', 'Admin\ContestsController', ['middleware' => ['acl:administrador|mod_global|mod_concursos']]);
+	Route::resource('notificaciones', 'Admin\NotificationsController', ['middleware' => ['acl:administrador|mod_global|mod_concursos']]);
 });
 

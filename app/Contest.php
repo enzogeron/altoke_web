@@ -12,6 +12,7 @@ class Contest extends Model
 		'body',
 		'resolution',
 		'published_at',
+		'expiration_date',
 		'position_id'
 	];
 

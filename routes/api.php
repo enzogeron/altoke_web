@@ -19,4 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'v1'], function () {
 	Route::get('concursos', 'Admin\ContestsController@data');
+	Route::get('notificaciones', 'Admin\NotificationsController@data');
 });

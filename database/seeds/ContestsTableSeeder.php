@@ -57,5 +57,9 @@ class ContestsTableSeeder extends Seeder
         $position->name = 'Beca de Formación';
         $position->save();
 
+        $position = new Position;
+        $position->name = 'Tutores Estudiantes';
+        $position->save();
+
     }
 }

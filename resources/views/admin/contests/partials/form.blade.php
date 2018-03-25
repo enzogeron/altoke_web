@@ -37,6 +37,12 @@
 				{!! $errors->first('departments', '<span class="help-block">:message</span>') !!}
 			</div>
 
+			<div class="form-group {{ $errors->has('expiration_date') ? 'has-error' : ''}}">
+				{!! Form::label('expiration_date', 'Fecha de caducidad del concurso') !!}
+				{!! Form::date('expiration_date', \Carbon\Carbon::now()->addDay(7), ['class' => 'form-control']) !!}
+				{!! $errors->first('expiration_date', '<span class="help-block">:message</span>') !!}
+			</div>
+
 			<div class="form-group">
 				{!! Form::submit('Publicar Concurso', ['class' => 'btn btn-primary btn-block']) !!}
 			</div>
