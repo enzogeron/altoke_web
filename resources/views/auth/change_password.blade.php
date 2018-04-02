@@ -14,7 +14,7 @@
 
                     <div class="form-group {{ $errors->has('current_password') ? 'has-error' : '' }}">
                         {!! Form::label('current_password', 'Contraseña actual') !!}
-                        {!! Form::password('current_password', ['class' => 'form-control', 'placeholder' => 'Escriba su contraseña actual']) !!}
+                        {!! Form::password('current_password', ['class' => 'form-control', 'placeholder' => '']) !!}
                         {!! $errors->first('current_password', '<span class="help-block">:message</span>') !!}
                     </div>
                     <hr>

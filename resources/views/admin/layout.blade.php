@@ -162,6 +162,24 @@
                         </ul>
                     </li>
 
+                    <li class="treeview {{ request()->is('admin/eventos*') ? 'active' : '' }}">
+                        <a href="#">
+                            <i class="fa fa-calendar"></i>
+                            <span>Eventos</span>
+                            <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li {{ request()->is('admin/eventos') ? 'class=active' : '' }}>
+                                <a href="{{ route('admin.eventos.index') }}">Listado de eventos</a>
+                            </li>
+                            <li {{ request()->is('admin/eventos/create') ? 'class=active' : '' }}>
+                                <a href="{{ route('admin.eventos.create') }}">Crear nuevo evento</a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li>
                         <a href="{{ route('home') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
@@ -208,7 +226,7 @@
             Impulsed by Enzo Geron
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; 2017 <a href="#">Altoke</a>.</strong> All rights reserved.
+            <strong>Copyright &copy; 2018 <a href="#">Altoke</a>.</strong> All rights reserved.
         </footer>
 
         <div class="control-sidebar-bg"></div>

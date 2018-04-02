@@ -8,6 +8,7 @@ use Illuminate\Http\Response;
 use App\Http\Requests\Admin\NotificationRequest;
 use App\Notification;
 use DB;
+use Carbon\Carbon;
 
 class NotificationsController extends Controller
 {
@@ -52,7 +53,7 @@ class NotificationsController extends Controller
 	}
 
 	public function data() {
-		$notification = Notification::orderBy('relevance', 'DESC')->orderBy('expiration_date', 'DESC')->get();
+		$notification = Notification::orderBy('relevance', 'DESC')->where('expiration_date', '>', Carbon::now())->orderBy('created_at', 'DESC')->orderBy('relevance', 'DESC')->get();
 
 		return response()->json($notification)->setStatusCode( Response::HTTP_OK, Response::$statusTexts[ Response::HTTP_OK ]);
 	}

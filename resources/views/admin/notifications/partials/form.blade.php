@@ -27,7 +27,7 @@
 
 			<div class="form-group {{ $errors->has('expiration_date') ? 'has-error' : ''}}">
 				{!! Form::label('expiration_date', 'Fecha de caducidad de la notificación') !!}
-				{!! Form::date('expiration_date', \Carbon\Carbon::now()->addDay(7), ['class' => 'form-control']) !!}
+				{!! Form::date('expiration_date', isset($notification->expiration_date) ? \Carbon\Carbon::parse($notification->expiration_date)->format('Y-m-d') : \Carbon\Carbon::now()->addDay(10), ['class' => 'form-control']) !!}
 				{!! $errors->first('expiration_date', '<span class="help-block">:message</span>') !!}
 			</div>
 

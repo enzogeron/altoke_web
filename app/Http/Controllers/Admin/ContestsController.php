@@ -10,6 +10,7 @@ use App\Contest;
 use App\Position;
 use App\Department;
 use DB;
+use Carbon\Carbon;
 
 class ContestsController extends Controller
 {
@@ -31,6 +32,7 @@ class ContestsController extends Controller
 		$contest->excerpt = $request->excerpt;
 		$contest->body = $request->body;
 		$contest->position_id = $request->position_id;
+		$contest->expiration_date = $request->expiration_date;
 		$contest->save();
 		$contest->departments()->sync($request->departments);
 		return redirect()->route('admin.concursos.index')->with('message', 'Se ha publicado el nuevo concurso estudiantil.');
@@ -49,6 +51,7 @@ class ContestsController extends Controller
 		$contest->excerpt = $request->excerpt;
 		$contest->body = $request->body;
 		$contest->position_id = $request->position_id;
+		$contest->expiration_date = $request->expiration_date;
 		$contest->save();
 		$contest->departments()->sync($request->departments);
 		return redirect()->route('admin.concursos.edit', $id)->with('message', 'Se ha actualizado el concurso estudiantil.');
@@ -62,7 +65,7 @@ class ContestsController extends Controller
 	}
 
 	public function data() {
-		$contest = Contest::with('position', 'departments')->orderBy('created_at', 'DESC')->get();
+		$contest = Contest::with('position', 'departments')->where('expiration_date', '>', Carbon::now())->orderBy('created_at', 'DESC')->get();
 
 		return response()->json($contest)->setStatusCode( Response::HTTP_OK, Response::$statusTexts[ Response::HTTP_OK ]);
 	}

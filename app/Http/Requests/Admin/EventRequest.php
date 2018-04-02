@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ContestRequest extends FormRequest
+class EventRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,8 +27,7 @@ class ContestRequest extends FormRequest
             'title' => 'required',
             'excerpt' => 'required',
             'body' => 'required',
-            'position_id' => 'required'
-            //'departments' => 'required'
+            'start_date' => 'required'
         ];
     }
 }

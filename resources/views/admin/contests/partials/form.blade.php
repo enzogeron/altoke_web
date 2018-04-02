@@ -39,7 +39,7 @@
 
 			<div class="form-group {{ $errors->has('expiration_date') ? 'has-error' : ''}}">
 				{!! Form::label('expiration_date', 'Fecha de caducidad del concurso') !!}
-				{!! Form::date('expiration_date', \Carbon\Carbon::now()->addDay(7), ['class' => 'form-control']) !!}
+				{!! Form::date('expiration_date', isset($contest->expiration_date) ? \Carbon\Carbon::parse($contest->expiration_date)->format('Y-m-d') : \Carbon\Carbon::now()->addDay(10), ['class' => 'form-control']) !!}
 				{!! $errors->first('expiration_date', '<span class="help-block">:message</span>') !!}
 			</div>
 

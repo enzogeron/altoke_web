@@ -26,7 +26,7 @@
 						<th width="400px">Título</th>
 						<th width="400px">Descripción breve</th>
 						<th>Cargo</th>
-						<th width="100px">Acciones</th>
+						<th width="150px">Acciones</th>
 					</tr>
 				</thead>
 				<tbody>
