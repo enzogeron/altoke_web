@@ -17,9 +17,10 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->mediumText('excerpt');
-            $table->text('body');
-            $table->string('image')->nullable();
-            $table->timestamp('start_date');
+            $table->text('body')->nullable();
+            $table->string('image')->nullable()->default('https://altoke.xyz/img/evento_altoke.jpg');
+            $table->string('place');
+            $table->dateTime('start_date');
             $table->timestamps();
         });
     }

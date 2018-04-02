@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 use App\Http\Requests\Admin\EventRequest;
 use App\Event;
 use DB;
+use Carbon\Carbon;
 
 class EventsController extends Controller
 {
@@ -25,6 +27,7 @@ class EventsController extends Controller
 		$event->excerpt = $request->excerpt;
 		$event->body = $request->body;
 		$event->image = $request->image;
+		$event->place = $request->place;
 		$event->start_date = $request->start_date;
 		$event->save();
 		return redirect()->route('admin.eventos.index')->with('message', 'Se ha creado el nuevo evento.');
@@ -41,6 +44,7 @@ class EventsController extends Controller
 		$event->excerpt = $request->excerpt;
 		$event->body = $request->body;
 		$event->image = $request->image;
+		$event->place = $request->place;
 		$event->start_date = $request->start_date;
 		$event->save();
 		return redirect()->route('admin.eventos.edit', $id)->with('message', 'Se ha actualizado el evento.');
@@ -56,5 +60,11 @@ class EventsController extends Controller
 		$event = Event::orderBy('start_date', 'DESC')->get();
 
 		return response()->json($event)->setStatusCode( Response::HTTP_OK, Response::$statusTexts[ Response::HTTP_OK ]);
+	}
+
+	private function convertStringToDate($text) {
+		$time = strtotime($text);
+		$format = date("Y-m-d H:i:s", $time);
+		return $format;
 	}
 }

@@ -16,15 +16,18 @@
 
 @push('scripts')
 	<script src="//cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
-	{!! Html::script('adminlte/plugins/datepicker/bootstrap-datepicker.js') !!}
+	{!! Html::style('adminlte/plugins/datetimepicker/bootstrap-datetimepicker.min.css') !!}
+	{!! Html::script('adminlte/plugins/datetimepicker/bootstrap-datetimepicker.min.js') !!}
 	<script type="text/javascript">
 		// CK Editor
 		CKEDITOR.replace('editor'); 
 		// Date picker
-		$('#datepicker').datepicker({
-			autoclose: true
+		$("#start_date").datetimepicker({
+			autoclose: true,
+			format: 'yyyy-mm-dd hh:ii:ss'
 		});
 	</script>
+	
 @endpush
 
 

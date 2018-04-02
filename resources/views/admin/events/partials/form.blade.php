@@ -32,9 +32,15 @@
 				{!! $errors->first('image', '<span class="help-block">:message</span>') !!}
 			</div>
 
+			<div class="form-group {{ $errors->has('place') ? 'has-error' : ''}}">
+				{!! Form::label('place', 'Lugar del evento') !!}
+				{!! Form::text('place', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el lugar donde se realizara el evento']) !!}
+				{!! $errors->first('place', '<span class="help-block">:message</span>') !!}
+			</div>
+
 			<div class="form-group {{ $errors->has('start_date') ? 'has-error' : ''}}">
 				{!! Form::label('start_date', 'Fecha de inicio del evento') !!}
-				{!! Form::date('start_date', isset($event->start_date) ? \Carbon\Carbon::parse($event->start_date)->format('Y-m-d') : \Carbon\Carbon::now(), ['class' => 'form-control']) !!}
+				{!! Form::datetime('start_date', isset($event->start_date) ? \Carbon\Carbon::parse($event->start_date)->format('Y-m-d H:i:s') : \Carbon\Carbon::now()->format('Y-m-d H:i:s'), ['class' => 'form-control', 'id' => 'start_date', 'readonly']) !!}
 				{!! $errors->first('start_date', '<span class="help-block">:message</span>') !!}
 			</div>
 
