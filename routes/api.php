@@ -22,4 +22,5 @@ Route::group(['prefix' => 'v1'], function () {
 	Route::get('notificaciones', 'Admin\NotificationsController@data');
 	Route::get('eventos', 'Admin\EventsController@data');
 	Route::post('premios', 'Admin\AwardsController@awards');
+	Route::post('reclamos', 'Admin\ClaimsController@claims');
 });

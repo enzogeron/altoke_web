@@ -25,7 +25,7 @@ class AwardsController extends Controller
 			$award->phone_number = $request->phone_number;
 			$award->uuid = $request->uuid;
 			$award->save();
-			$result = 'Buenisimo, ya te encuentras participando del sorteo.';
+			$result = 'Buenísimo, ya te encuentras participando del sorteo.';
     	} else {
     		$result = 'Tu dispositivo ya se encuentra registrado en el sorteo.';
     	}
