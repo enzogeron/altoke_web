@@ -105,7 +105,7 @@
                                     	<li>Enterarte de todos los eventos que se realizan en la facu</li>
                                     	<li>Participar activamente en actividades relacionadas al deporte universitario</li>
                                     	<li>Descargar los modelos de notas que necesites para hacer tus tramites</li>
-                                    	<li>Ver vídeos creados por tus compañeros y profes para que refuerces aquellos temas que no entendiste</li>
+                                    	<li>Ver vídeos creados por tus compañeros y profes para reforzar aquellos temas que no entendiste</li>
                                     </ul>
                                 </p>
                                 <p>
@@ -162,7 +162,7 @@
 
                             <div class="features">                          
                                 <i class="fa fa-check fa-2x circled bg-skin float-left"></i>
-                                <h5>Seguir mejorando</h5>
+                                <h5>Más nuevas funcionalidades</h5>
                                 <p>
                                 Este proyecto es una realidad gracias al trabajo conjunto de muchas personas, te invitamos a participar para seguir mejorando la app
                                 </p>
@@ -236,10 +236,10 @@
                           		<a class="image-popup-vertical-fit" href="{{ url('img/works/work_2.jpg') }}" title="Modelos de notas"><img src="{{ url('img/works/work_2.jpg') }}" class="img-responsive" alt="img"></a>
                             </div>
                             <div class="col-md-3">
-                                <a class="image-popup-vertical-fit" href="{{ url('img/works/work_3.jpg') }}" title="Información de tu carrera"><img src="{{ url('img/works/work_3.jpg') }}" class="img-responsive" alt="img"></a>
+                                <a class="image-popup-vertical-fit" href="{{ url('img/works/work_3.jpg') }}" title="Envíanos tus consultas y propuestas"><img src="{{ url('img/works/work_3.jpg') }}" class="img-responsive" alt="img"></a>
                             </div>
                             <div class="col-md-3">
-                                <a class="image-popup-vertical-fit" href="{{ url('img/works/work_4.jpg') }}" title="Actividades deportivas"><img src="{{ url('img/works/work_4.jpg') }}" class="img-responsive" alt="img"></a>
+                                <a class="image-popup-vertical-fit" href="{{ url('img/works/work_4.jpg') }}" title="Seguimos por los estudiantes"><img src="{{ url('img/works/work_4.jpg') }}" class="img-responsive" alt="img"></a>
                             </div>
                         </div>
 
